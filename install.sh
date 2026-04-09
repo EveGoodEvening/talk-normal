@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-# normal-gpt installer
+# talk-normal installer
 # Usage: bash install.sh [--uninstall]
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PROMPT_FILE="$SCRIPT_DIR/prompt.md"
-MARKER_BEGIN="# --- normal-gpt BEGIN ---"
-MARKER_END="# --- normal-gpt END ---"
+MARKER_BEGIN="# --- talk-normal BEGIN ---"
+MARKER_END="# --- talk-normal END ---"
 
 # Detect OpenClaw workspace
 find_agents_md() {
@@ -32,7 +32,7 @@ uninstall() {
     rm -f "${agents_md}.bak"
     echo "Uninstalled from $agents_md"
   else
-    echo "normal-gpt not found in $agents_md"
+    echo "talk-normal not found in $agents_md"
   fi
 }
 
@@ -53,7 +53,7 @@ install() {
 
   # Check if already installed
   if grep -q "$MARKER_BEGIN" "$agents_md" 2>/dev/null; then
-    echo "normal-gpt already installed in $agents_md. Run with --uninstall first to update."
+    echo "talk-normal already installed in $agents_md. Run with --uninstall first to update."
     exit 0
   fi
 

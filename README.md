@@ -1,4 +1,4 @@
-# normal-gpt
+# talk-normal
 
 English | [中文](README_CN.md)
 
@@ -38,7 +38,7 @@ After (GPT-4o-mini, 588 chars):
 
 ### Real-world example: financial market analysis
 
-This is the actual case that motivated building normal-gpt.
+This is the actual case that motivated building talk-normal.
 
 <details>
 <summary>Question (click to expand) — interpreting a trader's market commentary</summary>
@@ -310,7 +310,7 @@ This is the actual case that motivated building normal-gpt.
 </details>
 
 <details>
-<summary>After (GPT-5.4 + normal-gpt) — same information, 1/3 the length, no filler, no "如果你要我还可以...", reads like a human analyst wrote it</summary>
+<summary>After (GPT-5.4 + talk-normal) — same information, 1/3 the length, no filler, no "如果你要我还可以...", reads like a human analyst wrote it</summary>
 
 > 这段的核心就一句话：
 >
@@ -359,13 +359,13 @@ This is the actual case that motivated building normal-gpt.
 Paste this link into your OpenClaw chat and ask it to install:
 
 ```
-https://github.com/hexiecs/normal-gpt
+https://github.com/hexiecs/talk-normal
 ```
 
 Or install manually:
 
 ```bash
-git clone https://github.com/hexiecs/normal-gpt.git && cd normal-gpt && bash install.sh
+git clone https://github.com/hexiecs/talk-normal.git && cd talk-normal && bash install.sh
 ```
 
 Uninstall:
@@ -404,7 +404,7 @@ curl https://api.openai.com/v1/chat/completions \
 
 ### GPT-4o-mini — average reduction: 71%
 
-| # | Prompt | Original | normal-gpt | Reduction |
+| # | Prompt | Original | talk-normal | Reduction |
 |---|--------|----------|-----------|-----------|
 | 1 | TCP vs UDP? | 2516 | 829 | 67% |
 | 2 | What is Python? | 1584 | 588 | 62% |
@@ -419,7 +419,7 @@ curl https://api.openai.com/v1/chat/completions \
 
 ### GPT-5.4 — average reduction: 56%
 
-| # | Prompt | Original | normal-gpt | Reduction |
+| # | Prompt | Original | talk-normal | Reduction |
 |---|--------|----------|-----------|-----------|
 | 1 | TCP vs UDP? | 1000 | 611 | 38% |
 | 2 | What is Python? | 751 | 609 | 18% |
@@ -432,7 +432,7 @@ curl https://api.openai.com/v1/chat/completions \
 | 9 | Redis和Memcached哪个好? | 3197 | 1154 | 63% |
 | 10 | Microservices pros/cons | 3838 | 1712 | 55% |
 
-GPT-5.4 is already more concise than 4o-mini out of the box. normal-gpt still cuts verbose responses by 38-87% on both models.
+GPT-5.4 is already more concise than 4o-mini out of the box. talk-normal still cuts verbose responses by 38-87% on both models.
 
 ## License
 

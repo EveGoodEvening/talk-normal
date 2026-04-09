@@ -1,4 +1,4 @@
-# normal-gpt
+# talk-normal
 
 [English](README.md) | 中文
 
@@ -310,7 +310,7 @@
 </details>
 
 <details>
-<summary>改造后 (GPT-5.4 + normal-gpt) — 同样的信息量, 1/3 的长度, 没有废话, 没有"如果你要我还可以...", 读起来像人写的分析</summary>
+<summary>改造后 (GPT-5.4 + talk-normal) — 同样的信息量, 1/3 的长度, 没有废话, 没有"如果你要我还可以...", 读起来像人写的分析</summary>
 
 > 这段的核心就一句话：
 >
@@ -359,13 +359,13 @@
 把这个链接粘贴到 OpenClaw 聊天框, 让它帮你安装:
 
 ```
-https://github.com/hexiecs/normal-gpt
+https://github.com/hexiecs/talk-normal
 ```
 
 或者手动安装:
 
 ```bash
-git clone https://github.com/hexiecs/normal-gpt.git && cd normal-gpt && bash install.sh
+git clone https://github.com/hexiecs/talk-normal.git && cd talk-normal && bash install.sh
 ```
 
 卸载:
@@ -404,7 +404,7 @@ curl https://api.openai.com/v1/chat/completions \
 
 ### GPT-4o-mini — 平均减少 71%
 
-| # | 问题 | 原始 | normal-gpt | 减少 |
+| # | 问题 | 原始 | talk-normal | 减少 |
 |---|------|------|-----------|------|
 | 1 | TCP vs UDP? | 2516 | 829 | 67% |
 | 2 | What is Python? | 1584 | 588 | 62% |
@@ -419,7 +419,7 @@ curl https://api.openai.com/v1/chat/completions \
 
 ### GPT-5.4 — 平均减少 56%
 
-| # | 问题 | 原始 | normal-gpt | 减少 |
+| # | 问题 | 原始 | talk-normal | 减少 |
 |---|------|------|-----------|------|
 | 1 | TCP vs UDP? | 1000 | 611 | 38% |
 | 2 | What is Python? | 751 | 609 | 18% |
@@ -432,7 +432,7 @@ curl https://api.openai.com/v1/chat/completions \
 | 9 | Redis和Memcached哪个好? | 3197 | 1154 | 63% |
 | 10 | Microservices pros/cons | 3838 | 1712 | 55% |
 
-GPT-5.4 本身就比 4o-mini 简洁不少。normal-gpt 在两个模型上都能将啰嗦回复减少 38-87%。
+GPT-5.4 本身就比 4o-mini 简洁不少。talk-normal 在两个模型上都能将啰嗦回复减少 38-87%。
 
 ## 许可证
 
