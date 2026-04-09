@@ -307,7 +307,8 @@ This is the actual case that motivated building normal-gpt.
 
 </details>
 
-After (GPT-5.4 + normal-gpt):
+<details>
+<summary>After (GPT-5.4 + normal-gpt)</summary>
 
 > 这段的核心就一句话：
 >
@@ -346,6 +347,8 @@ After (GPT-5.4 + normal-gpt):
 >   * 另一条风险是 高商品价格后续传导到通胀/增长，那"股市只要海峡重开就没事"这条逻辑会变脆。
 >
 > 我的解读：这是一个很典型的 Citrini 式框架，不是看战争输赢，而是看"风险溢价该消失多少、不该消失多少"。重点不在预测明天，而在抓住未来1到3个月哪些资产被市场瞎杀了。
+
+</details>
 
 ## Usage
 
