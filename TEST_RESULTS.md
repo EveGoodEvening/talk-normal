@@ -2,6 +2,11 @@
 
 All tests run with `temperature=0`. Measured in characters.
 
+Three responses per question:
+- **Original** — GPT with no system prompt (the verbose default)
+- **normal-gpt** — GPT with the normal-gpt system prompt
+- **Claude Opus** — Claude Opus 4 with no system prompt (the target style)
+
 ## Summary
 
 ### GPT-4o-mini
@@ -138,6 +143,12 @@ TCP is reliable and connection-oriented; UDP is faster and connectionless.
 
 Use **TCP** for web pages, file transfers, and email. Use **UDP** for video calls, online gaming, and live streaming.
 
+#### Claude Opus
+
+**Opus (512 chars):**
+
+TCP is a connection-oriented protocol that guarantees reliable, ordered delivery of data. It establishes a connection via a three-way handshake, handles retransmission of lost packets, and provides flow control. UDP is connectionless — it just fires packets off with no guarantee of delivery, ordering, or duplicate protection. TCP is used where reliability matters (HTTP, file transfer, email). UDP is used where speed and low latency matter more than perfect delivery (video streaming, gaming, DNS queries).
+
 
 ### #2: What is Python?
 
@@ -218,6 +229,12 @@ print("Hello, world!")
 ```
 
 If you're starting programming, Python is one of the best first languages to learn.
+
+#### Claude Opus
+
+**Opus (547 chars):**
+
+Python is a high-level, interpreted, general-purpose programming language created by Guido van Rossum, first released in 1991. It emphasizes readability with its use of significant indentation. It's dynamically typed, garbage-collected, and supports multiple paradigms (procedural, object-oriented, functional). It's widely used in web development, data science, machine learning, scripting, automation, and scientific computing. Its massive ecosystem of libraries (NumPy, pandas, Django, Flask, TensorFlow, etc.) is one of its biggest strengths.
 
 
 ### #3: Explain how HTTP works
@@ -587,6 +604,12 @@ Versions:
 
 Use this mental model: HTTP is the language browsers and apps use to ask servers for resources and send data back.
 
+#### Claude Opus
+
+**Opus (616 chars):**
+
+HTTP is a request-response protocol running on top of TCP (or QUIC for HTTP/3). A client sends a request with a method (GET, POST, PUT, DELETE, etc.), a URL, headers, and optionally a body. The server processes it and returns a response with a status code (200, 404, 500, etc.), headers, and a body. HTTP is stateless — each request is independent, though cookies and sessions are used to maintain state. HTTPS adds TLS encryption on top. HTTP/1.1 introduced persistent connections, HTTP/2 added multiplexing and header compression, and HTTP/3 switched the transport layer from TCP to QUIC for better performance.
+
 
 ### #4: How does DNS work?
 
@@ -766,6 +789,12 @@ Common record types:
 
 DNS usually uses UDP on port 53 for speed, and TCP when needed, such as large responses or zone transfers. Use DNS over HTTPS or DNS over TLS if you want lookup privacy from local network observers.
 
+#### Claude Opus
+
+**Opus (591 chars):**
+
+When you type a domain name in your browser, your machine first checks its local cache. If not found, it queries a recursive DNS resolver (usually provided by your ISP or a service like 8.8.8.8). The resolver checks its cache, and if needed, starts from the root nameservers, which direct it to the TLD nameservers (.com, .org, etc.), which direct it to the authoritative nameservers for that domain. The authoritative server returns the actual IP address. The resolver caches the result based on the TTL value and returns it to your machine. The whole process typically takes milliseconds.
+
 
 ### #5: Is React better than Vue?
 
@@ -861,6 +890,12 @@ Pick **Vue** if:
 - you prefer templates and more built-in guidance
 
 Neither is universally “better.” React wins on ecosystem and market demand; Vue wins on approachability and developer ergonomics. For a new product with uncertain future needs, choose **React**.
+
+#### Claude Opus
+
+**Opus (634 chars):**
+
+Neither is objectively "better" — it depends on context. React has a larger ecosystem, more job opportunities, and is backed by Meta. It gives you more flexibility but requires more decisions (routing, state management, etc.). Vue is easier to pick up, has a more opinionated and cohesive ecosystem (Vue Router, Pinia are official), and offers excellent documentation. For large teams and enterprise projects, React is more common. For rapid development and smaller teams, Vue can be very productive. Both are mature, performant, and perfectly capable of building complex applications. Pick the one that fits your team and project.
 
 
 ### #6: Docker和虚拟机有什么区别?
@@ -1070,6 +1105,12 @@ Docker 是容器，虚拟机是完整机器模拟；Docker 更轻、更快，虚
 - 要部署应用、追求效率和弹性：优先 Docker。  
 - 要完整 OS、强隔离、跑不同系统：优先虚拟机。
 
+#### Claude Opus
+
+**Opus (544 chars):**
+
+Docker容器和虚拟机的核心区别在于隔离层级。虚拟机通过Hypervisor模拟完整的硬件环境，每个VM运行一个完整的操作系统，隔离性强但资源开销大，启动慢（分钟级）。Docker容器共享宿主机的内核，通过Linux的namespace和cgroup实现进程级隔离，非常轻量，启动快（秒级），资源利用率高。代价是隔离性不如VM强，且容器必须和宿主机使用相同的内核。实际中两者经常配合使用——在VM里跑容器是很常见的部署方式。
+
 
 ### #7: 什么是机器学习?
 
@@ -1186,6 +1227,12 @@ Docker 是容器，虚拟机是完整机器模拟；Docker 更轻、更快，虚
 3. 强化学习：通过奖励和惩罚学习策略，比如训练机器人或下棋程序。
 
 机器学习的价值在于：当规则太复杂、太多变、无法人工明确写出来时，它通常比传统编程更有效。理解它最直接的方式，就是把它看成“用数据生成规则”。
+
+#### Claude Opus
+
+**Opus (580 chars):**
+
+机器学习是人工智能的一个子领域，核心思想是让计算机从数据中自动学习规律，而不是靠人工编写明确的规则。主要分三类：监督学习（有标注数据，如分类、回归）、无监督学习（无标注，如聚类、降维）、强化学习（通过与环境交互获得奖励来学习策略）。深度学习是机器学习的一个分支，使用多层神经网络，在图像识别、自然语言处理等领域表现突出。典型流程是：收集数据、特征工程、选择模型、训练、评估、调优、部署。
 
 
 ### #8: 什么是区块链?
@@ -1322,6 +1369,12 @@ Docker 是容器，虚拟机是完整机器模拟；Docker 更轻、更快，虚
 - 数字身份和存证
 
 要点：区块链不等于比特币；比特币只是区块链的一种应用。
+
+#### Claude Opus
+
+**Opus (589 chars):**
+
+区块链是一种分布式账本技术。数据被打包成区块，每个区块包含前一个区块的哈希值，形成链式结构，因此篡改任何一个区块都会导致后续所有区块失效。网络中的节点通过共识机制（PoW、PoS等）来验证和确认交易，不需要中心化的可信第三方。比特币是第一个应用，以太坊扩展了智能合约的概念。优点是去中心化、透明、不可篡改；缺点是性能有限、能耗问题（PoW）、扩展性挑战。实际落地场景包括加密货币、供应链溯源、数字身份等。
 
 
 ### #9: Redis和Memcached哪个好?
@@ -1506,6 +1559,12 @@ Redis更好。它支持丰富的数据结构（如字符串、哈希、列表、
 - **老项目已经稳定跑 Memcached，且只是简单缓存：没必要强行迁移**
 
 如果你是在做 Web 缓存、会话、排行榜、限流、分布式锁，直接用 **Redis**。
+
+#### Claude Opus
+
+**Opus (570 chars):**
+
+没有绝对的好坏，看场景。Redis功能更丰富：支持多种数据结构（string、hash、list、set、sorted set等）、持久化、发布订阅、Lua脚本、集群模式，可以当消息队列、分布式锁等用，是个"瑞士军刀"。Memcached更简单纯粹，只做key-value缓存，多线程架构在简单缓存场景下性能很好，内存利用效率也不错。如果你只需要简单的缓存，两者都行；如果需要丰富的数据结构、持久化或者更复杂的功能，选Redis。目前业界趋势是Redis用得更广泛。
 
 
 ### #10: What are the pros and cons of microservices?
@@ -1759,4 +1818,24 @@ Microservices are best when you need independent scaling, faster team autonomy, 
 - Limited ops experience
 
 Recommendation: start with a modular monolith unless you already have clear scaling, team, or deployment pain that microservices directly solve.
+
+#### Claude Opus
+
+**Opus (1169 chars):**
+
+**Pros:**
+- Independent deployment — teams can ship features without coordinating a big release.
+- Technology flexibility — each service can use the best-fit language/database.
+- Scalability — scale individual services based on their specific load.
+- Fault isolation — one service failing doesn't necessarily bring down the whole system.
+- Organizational alignment — maps well to small, autonomous teams.
+
+**Cons:**
+- Operational complexity — you now need service discovery, distributed tracing, log aggregation, and container orchestration.
+- Network reliability — inter-service calls introduce latency, failure modes, and the need for retries/circuit breakers.
+- Data consistency — distributed transactions are hard; you often end up with eventual consistency and sagas.
+- Testing difficulty — integration and end-to-end testing become significantly more complex.
+- Overhead for small teams — if you have a small team or simple product, microservices add complexity that a monolith doesn't have.
+
+The general advice: start with a well-structured monolith and extract microservices when you have a clear need, not as a default architecture choice.
 
