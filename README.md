@@ -377,7 +377,7 @@ The script auto-detects your `AGENTS.md` and injects the prompt. Start a new con
 
 ### ChatGPT custom instructions
 
-Copy the contents of `prompt.md` into ChatGPT's custom instructions field.
+Copy the contents of `prompt.md` into ChatGPT's [custom instructions](https://chatgpt.com/#settings/Personalization) field.
 
 ### Any OpenAI API tool
 

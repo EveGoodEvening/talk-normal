@@ -377,7 +377,7 @@ bash install.sh --uninstall
 
 ### ChatGPT 自定义指令
 
-把 `prompt.md` 的内容复制到 ChatGPT 的自定义指令里。
+把 `prompt.md` 的内容复制到 ChatGPT 的[自定义指令](https://chatgpt.com/#settings/Personalization)里。
 
 ### 其他 OpenAI API 工具
 
