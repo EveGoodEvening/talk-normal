@@ -63,7 +63,7 @@ curl https://api.openai.com/v1/chat/completions \
 | 3 | Explain how HTTP works | 3783 | 927 | 75% |
 | 4 | How does DNS work? | 3160 | 1039 | 67% |
 | 5 | Is React better than Vue? | 2386 | 313 | 86% |
-| 6 | 2+2等于几? | 18 | 14 | 22% |
+| 6 | Docker和虚拟机有什么区别? | 879 | 332 | 62% |
 | 7 | 什么是机器学习? | 1471 | 572 | 61% |
 | 8 | 什么是区块链? | 440 | 209 | 52% |
 | 9 | Redis和Memcached哪个好? | 1898 | 372 | 80% |
@@ -78,7 +78,7 @@ curl https://api.openai.com/v1/chat/completions \
 | 3 | Explain how HTTP works | 4856 | 1686 | 65% |
 | 4 | How does DNS work? | 3258 | 1574 | 51% |
 | 5 | Is React better than Vue? | 1201 | 661 | 44% |
-| 6 | 2+2等于几? | 14 | 2 | 85% |
+| 6 | Docker和虚拟机有什么区别? | 1696 | 563 | 66% |
 | 7 | 什么是机器学习? | 2245 | 885 | 60% |
 | 8 | 什么是区块链? | 613 | 339 | 44% |
 | 9 | Redis和Memcached哪个好? | 3143 | 1015 | 67% |
