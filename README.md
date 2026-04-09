@@ -61,11 +61,11 @@ curl https://api.openai.com/v1/chat/completions \
 | 1 | What is 2+2? | 16 | 16 | 0% |
 | 2 | What is Python? | 1525 | 469 | 69% |
 | 3 | Explain how HTTP works | 3783 | 927 | 75% |
-| 4 | Write hello world in Go | 621 | 191 | 69% |
+| 4 | How does DNS work? | 3160 | 1039 | 67% |
 | 5 | Is React better than Vue? | 2386 | 313 | 86% |
 | 6 | 2+2等于几? | 18 | 14 | 22% |
 | 7 | 什么是机器学习? | 1471 | 572 | 61% |
-| 8 | 帮我写个排序算法 | 1181 | 547 | 53% |
+| 8 | 什么是区块链? | 440 | 209 | 52% |
 | 9 | Redis和Memcached哪个好? | 1898 | 372 | 80% |
 | 10 | Microservices pros/cons | 3111 | 687 | 77% |
 
@@ -76,15 +76,15 @@ curl https://api.openai.com/v1/chat/completions \
 | 1 | What is 2+2? | 2 | 2 | 0% |
 | 2 | What is Python? | 662 | 452 | 31% |
 | 3 | Explain how HTTP works | 4856 | 1686 | 65% |
-| 4 | Write hello world in Go | 87 | 126 | -44% |
+| 4 | How does DNS work? | 3258 | 1574 | 51% |
 | 5 | Is React better than Vue? | 1201 | 661 | 44% |
 | 6 | 2+2等于几? | 14 | 2 | 85% |
 | 7 | 什么是机器学习? | 2245 | 885 | 60% |
-| 8 | 帮我写个排序算法 | 837 | 1252 | -49% |
+| 8 | 什么是区块链? | 613 | 339 | 44% |
 | 9 | Redis和Memcached哪个好? | 3143 | 1015 | 67% |
 | 10 | Microservices pros/cons | 3635 | 1418 | 60% |
 
-GPT-5.4 is already more concise than 4o-mini out of the box. normal-gpt still helps significantly on verbose responses (#3, #5, #9, #10) but may add length to code answers (#4, #8) due to usage examples.
+GPT-5.4 is already more concise than 4o-mini out of the box. normal-gpt still cuts verbose responses by 44-85% on both models.
 
 ## License
 
