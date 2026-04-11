@@ -360,26 +360,24 @@
 
 三种安装方式, 按你习惯的来:
 
-**方式 1: ClawHub (更新最方便)**
-
-```bash
-clawhub install talk-normal
-bash skills/talk-normal/install.sh
-```
-
-以后要拉最新规则:
-
-```bash
-clawhub update talk-normal
-bash skills/talk-normal/install.sh
-```
-
-**方式 2: 粘贴 GitHub 链接到聊天框**
+**方式 1: 粘贴 GitHub 链接到聊天框 (最简单)**
 
 把这个链接粘贴到 OpenClaw 聊天框, 让它帮你安装:
 
 ```
 https://github.com/hexiecs/talk-normal
+```
+
+**方式 2: ClawHub**
+
+```bash
+clawhub install talk-normal && bash skills/talk-normal/install.sh
+```
+
+以后要拉最新规则:
+
+```bash
+clawhub update talk-normal && bash skills/talk-normal/install.sh
 ```
 
 **方式 3: 手动 git clone**

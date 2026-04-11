@@ -360,26 +360,24 @@ This is the actual case that motivated building talk-normal.
 
 Three ways, pick whichever fits your workflow:
 
-**Option 1: ClawHub (easiest updates)**
-
-```bash
-clawhub install talk-normal
-bash skills/talk-normal/install.sh
-```
-
-To pull the latest rules later:
-
-```bash
-clawhub update talk-normal
-bash skills/talk-normal/install.sh
-```
-
-**Option 2: Paste the GitHub link into chat**
+**Option 1: Paste the GitHub link into chat (easiest)**
 
 Paste this link into your OpenClaw chat and ask it to install:
 
 ```
 https://github.com/hexiecs/talk-normal
+```
+
+**Option 2: ClawHub**
+
+```bash
+clawhub install talk-normal && bash skills/talk-normal/install.sh
+```
+
+To pull the latest rules later:
+
+```bash
+clawhub update talk-normal && bash skills/talk-normal/install.sh
 ```
 
 **Option 3: Manual git clone**
