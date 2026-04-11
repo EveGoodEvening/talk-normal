@@ -4,6 +4,8 @@
 
 让任何 LLM 说人话。不废话, 不客套, 直接给答案。
 
+欢迎贡献。参见 [CONTRIBUTING.md](CONTRIBUTING.md), 在 [Issues](https://github.com/hexiecs/talk-normal/issues/new/choose) 提交规则建议。最新规则变更见 [CHANGELOG.md](CHANGELOG.md)。
+
 ## 它做什么
 
 一段 system prompt, 把 LLM 啰嗦的、客服腔的输出变成直接、有信息量的回答。适用于任何模型 (GPT, Gemini, LLaMA 等)。在 GPT-4o-mini 上测试 **减少 71%** 输出长度, GPT-5.4 上 **减少 56%**, 同时保留所有有用信息。[查看 10 个测试问题的完整对比](TEST_RESULTS.md)。
