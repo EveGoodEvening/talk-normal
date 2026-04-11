@@ -454,6 +454,12 @@ curl https://api.openai.com/v1/chat/completions \
 
 GPT-5.4 is already more concise than 4o-mini out of the box. talk-normal still cuts verbose responses by 38-87% on both models.
 
+## Rule iteration
+
+Individual rules are iterated against real LLM output. Each rule that leaks in production gets a file in [regressions/](regressions/) tracking the leak count per version, the specific fix, and the observed LLM excerpts that motivated each round.
+
+Example: the `"不是X，而是Y"` rhetorical frame went from 6 violations per response to 0 across four iterations on the same stress prompt. The load-bearing change turned out to be removing a specific negative example from the rule text — it was being copied verbatim by the model as a template instead of avoided as an anti-pattern. Full writeup: [regressions/rule-17-negation-frame.md](regressions/rule-17-negation-frame.md).
+
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=hexiecs/talk-normal&type=Date)](https://star-history.com/#hexiecs/talk-normal&Date)

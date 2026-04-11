@@ -454,6 +454,12 @@ curl https://api.openai.com/v1/chat/completions \
 
 GPT-5.4 本身就比 4o-mini 简洁不少。talk-normal 在两个模型上都能将啰嗦回复减少 38-87%。
 
+## 规则迭代
+
+单条规则通过真实 LLM 输出的漏网案例迭代。每一条在实际使用中漏网的规则都会在 [regressions/](regressions/) 里记一份档案，追踪各版本的漏网次数、具体修复、以及触发每轮迭代的真实 LLM 输出片段。
+
+案例：`"不是X，而是Y"` 这条规则经过 4 轮迭代，同一测试 prompt 上每响应的漏网次数从 6 降到 0。真正起作用的改动是从规则文本里删掉了一个具体反例 —— 模型会把反例当模板照抄，而不是当成要避免的反模式。完整记录：[regressions/rule-17-negation-frame.md](regressions/rule-17-negation-frame.md)。
+
 ## Star 增长曲线
 
 [![Star History Chart](https://api.star-history.com/svg?repos=hexiecs/talk-normal&type=Date)](https://star-history.com/#hexiecs/talk-normal&Date)
