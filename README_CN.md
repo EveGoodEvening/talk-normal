@@ -687,7 +687,7 @@ git clone https://github.com/hexiecs/talk-normal.git && cd talk-normal && bash i
 
 卸载:
 ```bash
-cd ~ && bash install.sh --uninstall
+cd ~ && bash ~/.hermes/skills/skill-hermes/install.sh --uninstall
 ```
 
 ### ChatGPT 自定义指令

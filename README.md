@@ -687,7 +687,7 @@ The installer auto-detects your workspace config file (`.hermes.md`, `HERMES.md`
 
 Uninstall:
 ```bash
-cd ~ && bash install.sh --uninstall
+cd ~ && bash ~/.hermes/skills/skill-hermes/install.sh --uninstall
 ```
 
 ### ChatGPT custom instructions
