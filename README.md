@@ -664,15 +664,15 @@ Two ways:
 **Option 1: Install from GitHub**
 
 ```bash
-hermes skills install --force hexiecs/talk-normal/hermes
+hermes skills install --force hexiecs/talk-normal/talk-normal
 ```
 
-> `--force` is required because this skill modifies your `AGENTS.md` to inject always-on prompt rules — Hermes's security scanner flags that as persistent prompt modification. The skill is open-source; review it at [`hermes/SKILL.md`](hermes/SKILL.md) before installing.
+> `--force` is required because this skill modifies your `AGENTS.md` to inject always-on prompt rules — Hermes's security scanner flags that as persistent prompt modification. The skill is open-source; review it at [`talk-normal/SKILL.md`](talk-normal/SKILL.md) before installing.
 
 Then run the installer in your project directory:
 
 ```bash
-bash ~/.hermes/skills/talk-normal/install.sh
+cd your-project && bash ~/.hermes/skills/talk-normal/install.sh
 ```
 
 **Option 2: Manual git clone**

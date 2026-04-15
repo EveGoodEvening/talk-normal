@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # sync-skill.sh — copy prompt.md and install.sh from the repo root into skill/
-# and hermes/, and auto-update each SKILL.md's version field to match the
+# and talk-normal/, and auto-update each SKILL.md's version field to match the
 # version header at the top of prompt.md. Single source of truth for the
 # version is prompt.md.
 #
@@ -10,7 +10,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 SKILL_DIR="$REPO_ROOT/skill"
-HERMES_DIR="$REPO_ROOT/hermes"
+HERMES_DIR="$REPO_ROOT/talk-normal"
 PROMPT_FILE="$REPO_ROOT/prompt.md"
 SKILL_MANIFEST="$SKILL_DIR/SKILL.md"
 HERMES_MANIFEST="$HERMES_DIR/SKILL.md"
@@ -78,4 +78,4 @@ fi
 
 echo "Next:"
 echo "  ClawHub: clawhub publish ./skill --slug talk-normal --version $VERSION --tags latest --changelog \"...\""
-echo "  Hermes:  hermes skills publish ./hermes (or users install directly from GitHub)"
+echo "  Hermes:  hermes skills publish ./talk-normal (or users install directly from GitHub)"
