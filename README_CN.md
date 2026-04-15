@@ -664,16 +664,18 @@ bash install.sh --uninstall
 **方式 1: 从 GitHub 安装**
 
 ```bash
-hermes skills install --force hexiecs/talk-normal/skill-hermes/hermes
+hermes skills install --force hexiecs/talk-normal/skill-hermes
 ```
 
 > 需要 `--force` 是因为这个 skill 会修改你的 `AGENTS.md` 来注入常驻 prompt 规则 — Hermes 的安全扫描器会将此标记为持久性 prompt 修改。skill 是开源的, 安装前可以在 [`skill-hermes/SKILL.md`](skill-hermes/SKILL.md) 查看完整内容。
 
-然后在你的项目目录运行安装器:
+然后运行安装器 (全局安装到 `~/AGENTS.md`):
 
 ```bash
-cd your-project && bash ~/.hermes/skills/talk-normal/install.sh
+cd ~ && bash ~/.hermes/skills/skill-hermes/install.sh
 ```
+
+如果只想在特定项目里生效, 先 `cd` 到该项目目录再运行安装器。
 
 **方式 2: 手动 git clone**
 
@@ -685,7 +687,7 @@ git clone https://github.com/hexiecs/talk-normal.git && cd talk-normal && bash i
 
 卸载:
 ```bash
-bash install.sh --uninstall
+cd ~ && bash install.sh --uninstall
 ```
 
 ### ChatGPT 自定义指令

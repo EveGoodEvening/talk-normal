@@ -669,11 +669,13 @@ hermes skills install --force hexiecs/talk-normal/skill-hermes
 
 > `--force` is required because this skill modifies your `AGENTS.md` to inject always-on prompt rules — Hermes's security scanner flags that as persistent prompt modification. The skill is open-source; review it at [`skill-hermes/SKILL.md`](skill-hermes/SKILL.md) before installing.
 
-Then run the installer in your project directory:
+Then run the installer (installs globally to `~/AGENTS.md`):
 
 ```bash
-cd your-project && bash ~/.hermes/skills/talk-normal/install.sh
+cd ~ && bash ~/.hermes/skills/skill-hermes/install.sh
 ```
+
+To install for a specific project instead, `cd` into that project directory before running the installer.
 
 **Option 2: Manual git clone**
 
@@ -685,7 +687,7 @@ The installer auto-detects your workspace config file (`.hermes.md`, `HERMES.md`
 
 Uninstall:
 ```bash
-bash install.sh --uninstall
+cd ~ && bash install.sh --uninstall
 ```
 
 ### ChatGPT custom instructions
